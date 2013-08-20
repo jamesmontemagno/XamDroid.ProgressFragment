@@ -42,6 +42,7 @@ namespace com.refractored.mvxcomponents.progressfragment
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
+            var ignored = base.OnCreateView(inflater, container, savedInstanceState);
             return inflater.Inflate(Resource.Layout.fragment_grid, container, false);
         }
 

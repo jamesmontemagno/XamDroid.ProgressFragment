@@ -42,8 +42,8 @@ namespace com.refractored.mvxcomponents.progressfragment
 
         }
 
-
-
+        
+       
         private View m_ContentView;
         /// <summary>
         /// Gets or sets the content view.
@@ -262,6 +262,7 @@ namespace com.refractored.mvxcomponents.progressfragment
         /// <returns></returns>
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
+            var ignored = base.OnCreateView(inflater, container, savedInstanceState);
             return inflater.Inflate(Resource.Layout.fragment_progress, container, false);
         }
 
