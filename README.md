@@ -56,8 +56,8 @@ ContentShown = true;
 Ported and Maintained by:
 James Montemagno ([@JamesMontemagno](http://www.twitter.com/jamesmontemagno))
 
-Original StickyListHeaders by:
-([Evgeny Shishkin on GitHub](https://github.com/emilsjolander/StickyListHeaders))
+Original ProgressFragment by:
+([Evgeny Shishkin on GitHub](https://github.com/johnkil/Android-ProgressFragment))
 
 
 ## Original License
