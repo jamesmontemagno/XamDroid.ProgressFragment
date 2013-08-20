@@ -113,6 +113,19 @@ namespace com.refractored.compontents.progressfragment
             }
         }
 
+        private int m_EmptyTextRes;
+        public int EmptyTextRes
+        {
+            get
+            {
+                return m_EmptyTextRes;
+            }
+            set
+            {
+                this.SetEmptyText(value);
+            }
+        }
+
         private bool m_ContentShown = false;
         public bool ContentShown
         {
@@ -172,6 +185,7 @@ namespace com.refractored.compontents.progressfragment
         /// <param name="resId"></param>
         public void SetEmptyText(int resId)
         {
+            m_EmptyTextRes = resId;
             EmptyText = GetString(resId);
         }
 

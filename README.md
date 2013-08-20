@@ -27,7 +27,11 @@ public class MyProgressFragment : ProgressFragment {
 ```
 
 If you use MvvmCross:
-Coming soon
+You have a few bools that you can bind to:
+```bool ContentShown{get;set;}``` : Determines if the content is visible
+```bool IsContentEmpty{get;set;}``` : Displays no data if visible
+```int EmptyTextRes{get;set;}``` : Resource id (of string) to display when no data
+```string EmptyText{get;set;}``` : String to display when no data
 
 Setup content view and empty text (optional) in OnActivityCreate() method.
 ```
