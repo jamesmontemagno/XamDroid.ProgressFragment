@@ -40,20 +40,20 @@ namespace com.refractored.compontents.progressfragment
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f040004
-			public static int content_container = 2130968580;
+			// aapt resource value: 0x7f030004
+			public static int content_container = 2130903044;
 			
-			// aapt resource value: 0x7f040003
-			public static int grid = 2130968579;
+			// aapt resource value: 0x7f030003
+			public static int grid = 2130903043;
 			
-			// aapt resource value: 0x7f040002
-			public static int grid_container = 2130968578;
+			// aapt resource value: 0x7f030002
+			public static int grid_container = 2130903042;
 			
-			// aapt resource value: 0x7f040000
-			public static int progress_container = 2130968576;
+			// aapt resource value: 0x7f030000
+			public static int progress_container = 2130903040;
 			
-			// aapt resource value: 0x7f040001
-			public static int progress_text = 2130968577;
+			// aapt resource value: 0x7f030001
+			public static int progress_text = 2130903041;
 			
 			static Id()
 			{
@@ -80,25 +80,6 @@ namespace com.refractored.compontents.progressfragment
 			}
 			
 			private Layout()
-			{
-			}
-		}
-		
-		public partial class String
-		{
-			
-			// aapt resource value: 0x7f030001
-			public static int ApplicationName = 2130903041;
-			
-			// aapt resource value: 0x7f030000
-			public static int Hello = 2130903040;
-			
-			static String()
-			{
-				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
-			}
-			
-			private String()
 			{
 			}
 		}
