@@ -1,4 +1,5 @@
-﻿XamDroid.ProgressFragment
+[![Stories in Ready](https://badge.waffle.io/jamesmontemagno/XamDroid.ProgressFragment.png?label=ready)](https://waffle.io/jamesmontemagno/XamDroid.ProgressFragment)  
+o;?XamDroid.ProgressFragment
 ================
 
 Implementation of the fragment with the ability to display indeterminate progress indicator when you are waiting for the initial data.
