@@ -26,7 +26,14 @@ public class MyProgressFragment : ProgressFragment {
 }
 ```
 
-If you use MvvmCross:
+If you use MvvmCross (use the MVXLibary):
+
+```
+public class MyProgressFragment : MvxProgressFragment {
+
+}
+```
+
 You have a few bools that you can bind to:
 ```bool ContentShown{get;set;}``` : Determines if the content is visible
 ```bool IsContentEmpty{get;set;}``` : Displays no data if visible
