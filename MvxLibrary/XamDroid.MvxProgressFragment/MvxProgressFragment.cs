@@ -82,6 +82,19 @@ namespace com.refractored.mvxcomponents.progressfragment
         }
 
         private bool m_IsContentEmpty;
+
+        /// <summary>
+        /// Gets or sets if the Content is not empty
+        /// </summary>
+        public bool IsContentNotEmpty
+        {
+            get { return !this.m_IsContentEmpty; }
+            set
+            {
+                this.SetIsContentEmpty(!value);
+            }
+        }
+
         /// <summary>
         /// Gets or sets if the Content is empty
         /// </summary>
@@ -90,15 +103,20 @@ namespace com.refractored.mvxcomponents.progressfragment
             get { return this.m_IsContentEmpty; }
             set
             {
-                this.EnsureContent();
-                if (this.m_ContentView == null)
-                    throw new IllegalStateException("Content view must be initialized before setting.");
-
-                this.m_IsContentEmpty = value;
-
-                this.m_EmptyView.Visibility = this.m_IsContentEmpty ? ViewStates.Visible : ViewStates.Gone;
-                this.m_ContentView.Visibility = this.m_IsContentEmpty ? ViewStates.Gone : ViewStates.Visible;
+                this.SetIsContentEmpty(value);
             }
+        }
+
+        private void SetIsContentEmpty(bool contentEmpty)
+        {
+            this.EnsureContent();
+            if (this.m_ContentView == null)
+                throw new IllegalStateException("Content view must be initialized before setting.");
+
+            this.m_IsContentEmpty = contentEmpty;
+
+            this.m_EmptyView.Visibility = this.m_IsContentEmpty ? ViewStates.Visible : ViewStates.Gone;
+            this.m_ContentView.Visibility = this.m_IsContentEmpty ? ViewStates.Gone : ViewStates.Visible;
         }
 
         /// <summary>
@@ -136,6 +154,18 @@ namespace com.refractored.mvxcomponents.progressfragment
             {
                 this.SetEmptyText(value);
             }
+        }
+
+        public bool ContentNotShown
+        {
+            get { return !this.m_ContentShown; }
+            set { this.SetContentShown(!value, true); }
+        }
+
+        public bool ContentNotShownNoAnimation
+        {
+            get { return !this.m_ContentShown; }
+            set { this.SetContentShown(!value, false); }
         }
 
         private bool m_ContentShown = false;

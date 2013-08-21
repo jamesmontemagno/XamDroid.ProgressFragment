@@ -22,25 +22,16 @@ Install from Component Store or Clone and add project or dll to your solution.
 To display the progress fragment you will need the following code:
 ```
 public class MyProgressFragment : ProgressFragment {
-
+    private View m_ContentView;
+    public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    {
+        m_ContentView = inflater.Inflate(Resource.Layout.your_content_view, null);
+        return base.OnCreateView(inflater, container, savedInstanceState);
+    }
 }
 ```
 
-If you use MvvmCross (use the MVXLibary):
-
-```
-public class MyProgressFragment : MvxProgressFragment {
-
-}
-```
-
-You have a few bools that you can bind to:
-```bool ContentShown{get;set;}``` : Determines if the content is visible
-```bool IsContentEmpty{get;set;}``` : Displays no data if visible
-```int EmptyTextRes{get;set;}``` : Resource id (of string) to display when no data
-```string EmptyText{get;set;}``` : String to display when no data
-
-Setup content view and empty text (optional) in OnActivityCreate() method.
+Setup content view (required) and empty text (optional) in OnActivityCreate() method.
 ```
 public override void OnActivityCreated(Bundle savedInstanceState)
 {
@@ -52,6 +43,33 @@ public override void OnActivityCreated(Bundle savedInstanceState)
     SetEmptyText(Resource.String.empty);
 }
 ```
+
+If you use MvvmCross (use the MVXLibary) and there are some special things in the setup:
+```
+public class MyProgressFragment : MvxProgressFragment {
+    private View m_ContentView;
+    var originalView = base.OnCreateView(inflater, container, savedInstanceState);
+    m_ContentView = this.BindingInflate(Resource.Layout.your_content_view, null);
+
+    var set = this.CreateBindingSet<YourFragment, YourViewModel>();
+    set.Bind(this).For(v => v.ContentNotShown).To(vm => vm.IsBusy).Mode(MvxBindingMode.OneWay); //don't show when busy or something
+    set.Bind(this).For(v => v.IsContentNotEmpty).To(vm => vm.HasContent).Mode(MvxBindingMode.OneWay); //bind to has content or somethng
+    set.Apply();
+
+    return originalView;
+}
+```
+
+You have a few bools that you can bind to:
+```bool ContentShown{get;set;}``` : Determines if the content is visible
+```bool IsContentEmpty{get;set;}``` : Displays no data if visible
+```bool ContentNotShown{get;set;}``` : Determines if the content is visible (inverse of ContentShown)
+```bool IsContentEmpty{get;set;}``` : Displays no data if visible
+```bool IsContentNotEmpty{get;set;}``` : Displays no data if visible (inverse of IsContentEmpty)
+```int EmptyTextRes{get;set;}``` : Resource id (of string) to display when no data
+```string EmptyText{get;set;}``` : String to display when no data
+
+
 
 Display Indeterminate progress indicator:
 ```
