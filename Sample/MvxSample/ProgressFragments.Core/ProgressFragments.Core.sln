@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgressFragments.Core", "ProgressFragments.Core.csproj", "{2EF3B2B6-EB8E-4CB7-988F-43B9D0F799EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgressFragments.Droid", "..\ProgressFragments.Droid\ProgressFragments.Droid.csproj", "{6F0B02E5-5E6E-4F80-91AB-BB2054CE8ADA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamDroid.MvxProgressFragment", "..\..\..\MvxLibrary\XamDroid.MvxProgressFragment\XamDroid.MvxProgressFragment.csproj", "{CDA59619-314F-48B2-A0AA-673774C343A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{7936017E-C143-4B27-891D-92F1D34BB762}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2EF3B2B6-EB8E-4CB7-988F-43B9D0F799EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EF3B2B6-EB8E-4CB7-988F-43B9D0F799EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EF3B2B6-EB8E-4CB7-988F-43B9D0F799EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EF3B2B6-EB8E-4CB7-988F-43B9D0F799EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F0B02E5-5E6E-4F80-91AB-BB2054CE8ADA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F0B02E5-5E6E-4F80-91AB-BB2054CE8ADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F0B02E5-5E6E-4F80-91AB-BB2054CE8ADA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6F0B02E5-5E6E-4F80-91AB-BB2054CE8ADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F0B02E5-5E6E-4F80-91AB-BB2054CE8ADA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F0B02E5-5E6E-4F80-91AB-BB2054CE8ADA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{CDA59619-314F-48B2-A0AA-673774C343A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDA59619-314F-48B2-A0AA-673774C343A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDA59619-314F-48B2-A0AA-673774C343A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDA59619-314F-48B2-A0AA-673774C343A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

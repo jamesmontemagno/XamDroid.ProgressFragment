@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/*
+* Copyright (C) 2013 @JamesMontemagno http://www.montemagno.com http://www.refractored.com
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+* Converted from: https://github.com/johnkil/Android-ProgressFragment
+*/-->
+<resources>
+    <string name="ApplicationName">XamDroid.ProgressFragment.Sample</string>
+    <string name="menu_refresh">Refresh</string>
+    <string name="title">Seattle</string>
+    <string name="description">
+      Seattle is a major coastal seaport city and the seat of King County,
+      in the U.S. state of Washington. With an estimated 634,535 residents as of 2012,
+      Seattle is the largest city in the Pacific Northwest region of North America and
+      is one of the fastest-growing cities in the United States. The Seattle metropolitan 
+      area of around 4 million inhabitants is the 15th largest metropolitan area in the
+      nation.[6] The city is situated on a narrow isthmus between Puget Sound (an inlet of the Pacific Ocean)
+      and Lake Washington, about 100 miles (160 km) south of the Canada–United States border.
+      A major gateway for trade with Asia, Seattle is the 8th largest port in the United States
+      and 9th largest in North America in terms of container handling.
+    </string>
+    <string name="empty">No Data</string>
+    <string name="loading">Loading&#8230;</string>
+</resources>
